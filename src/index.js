@@ -1,1 +1,1 @@
-console.log('teste wunbasd');
+console.log('JS virá aqui');
