@@ -1,7 +1,7 @@
 const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -11,12 +11,12 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyPlugin([
-      { from: 'assets', to: 'assets' },
-    ]),
     new HtmlWebpackPlugin({
       title: 'PACMAN',
       template: 'src/index.html',
     }),
+    new CopyPlugin([
+      { from: 'assets', to: 'assets' },
+    ]),
   ],
 };
