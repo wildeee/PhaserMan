@@ -1,3 +1,4 @@
+import './index.sass';
 import Phaser from 'phaser';
 
 function preload() {
