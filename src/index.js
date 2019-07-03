@@ -1,4 +1,5 @@
 import './index.sass';
+import Phaser from 'phaser';
 import config from './config';
 
 const boot = () => {
