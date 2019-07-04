@@ -1,12 +1,17 @@
-export default class MainGame extends Phaser.Scene {
+import BaseScene from './BaseScene';
+
+export default class MainGame extends BaseScene {
   constructor() {
     super({
       key: 'MainGame',
-      active: true,
     });
   }
 
+  preload() {
+    this.load.image('map', 'assets/map.png');
+  }
+
   create() {
-    this.add.image(0, 0, 'map');
+    const map = this.add.image(this.halfWidth, this.halfHeight, 'map');
   }
 }
