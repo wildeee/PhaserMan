@@ -15,11 +15,12 @@ export default class MainGame extends BaseScene {
 
   create() {
     // const map = this.add.image(this.halfWidth, this.halfHeight, 'map');
-    const logo = this.add.image(this.halfWidth, this.halfHeight, 'logo');
+    const logo = this.add.image(this.halfWidth, 0, 'logo');
+    logo.setOrigin(0.5, 0);
 
     this.tweens.add({
       targets: logo,
-      y: this.height - (logo.height / 2),
+      y: this.height - logo.height,
       duration: 2000,
       ease: 'Power2',
       yoyo: true,
